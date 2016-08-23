@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<!--<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="../public/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../public/js/self-adapation.js"></script>
+		<link rel="stylesheet" href="../public/css/community.css" />
+		<title>社交place</title>
+	</head>-->
+<% include community.ejs %>
+	<body>
+		<div class="hidden_index">
+			<header>
+				<div class="sociality_head">
+					<ul class="sociality_head_two">
+						<li class="sociality_side">&nbsp;</li>
+						<li class="sociality_head_fllow sociality_in" onclick="select_so(this,1)">关注</li>
+						<li class="sociality_head_world sociality_in sociality_bottom" onclick="select_so(this,2)">世界</li>
+						<!--<li class="sociality_side sociality_camara"></li>--> 
+					</ul>
+				</div>
+			</header>
+			<nav class="nav_socia" style="display: none;">
+				<div id="banner_box" class="box_swipe" style="visibility: visible;">
+					<ul style="list-style: none; width: 3200px; -webkit-transition: 500ms; -webkit-transform: translate3d(-2560px, 0px, 0px);">
+						<li>
+							<a href=""> <img src="../../public/images/yiyuanduoquan/1.jpg" alt="" /> </a>
+						</li>
+						<li>
+							<a href="#"> <img src="../../public/images/yiyuanduoquan/2.jpg" alt="" /> </a>
+						</li>
+						<li>
+							<a href="#"> <img src="../../public/images/yiyuanduoquan/3.jpg" alt="" /> </a>
+						</li>
+						<li>
+							<a href="">
+								<img src="../../public/images/yiyuanduoquan/4.jpg" alt="" /> </a>
+						</li>
+					</ul>
+					<ol>
+						<li class="on"></li>
+						<li class=""></li>
+						<li class=""></li>
+						<li class=""></li>
+					</ol>
+				</div>
+			</nav>
+			<div class="sociality_con_nothing" style="display: none;">
+			</div>
+			<div class="loading_content">
+				<div class="sociality_out">
+					<!--<div class="sociality_content" feedid="56">
+					<ul class="sociality_con_mix">
+						<a href="sociality_message.html?feedId=56">
+							<li class="sociality_con_mix_a">
+								<div><img src="http://img.hxfapp.com/Fvu9VnNf7H5u-oVuhNuLiECrkSiY" alt=""></div>
+								<div>
+									<p>Echo萱萱</p>
+								</div>
+								<div class="sociality_mix_change_time">19分钟前</div>
+							</li>
+							<li class="sociality_con_mix_b"><img src="http://img.hxfapp.com/FkeVpqXtUPrZFd8-seCga8NvBoGf" alt=""></li>
+						</a>
+					</ul>
+					<div class="sociality_con_mix_d">
+						<div class="sociality_first sociality_sefi"><img src="../public/img/community/ico_like_click@2x.png" alt=""><span class="like_numbers" itemid="1">1</span>赞 </div>
+						<a href="sociality_message.html?feedId=56">
+							<div class="sociality_second sociality_sefi"><img src="../public/img/community/ico_comment_click@2x.png" alt="">0评论 </div>
+						</a>
+						<div class="sociality_flower">
+							<img src="../public/img/community/ico_flower_click@2x.png" alt=""/>
+						</div>
+						<div class="sociality_share"></div>
+					</div>
+					<div class="sociality_con_nothing"></div>
+				</div>-->
+				</div>
+			</div>
+		</div>
+		<div class="pop_window">
+			<div class="pop_shadow" style="display: none;"></div>
+			<div class="pop_content" style="display: none;">
+				<div class="pop_content_top">
+					<div class="pop_content_num">选择数量</div>
+					<div class="pop_content_img">
+						<img src="../../public/images/all/ico_delete@2x.png" alt="删除按钮" />
+					</div>
+				</div>
+				<div class="pop_content_choose">
+					<ul class="pop_content_ones">
+						<li>5</li>
+						<li>20</li>
+						<li>50</li>
+						<li>100</li>
+					</ul>
+					<div class="pop_content_self">
+						<div class="pop_content_left">
+							<img src="../../public/images/community/ico_btn_reduce@2x.png" alt="减" />
+						</div>
+						<div class="pop_content_middle">
+							<input type="number" alt="数字显示" value="1" />
+						</div>
+						<div class="pop_content_right">
+							<img src="../../public/images/community/ico_btn_add@2x.png" alt="加" />
+						</div>
+
+					</div>
+					<div class="pop_bottom">
+						送<span class="pop_bottom_one">1</span>朵花花，共<span class="pop_bottom_two">1</span>元。
+					</div>
+				</div>
+				<div class="pop_content_btn">
+					确认送出
+				</div>
+			</div>
+			<div class="pop_flower" style="display: none;">
+				<div class="pop_flower_delete">
+					<img src="../../public/images/community/bg_cls@3x.png" alt="" />
+				</div>
+				<div class="pop_flower_record">
+					<div class="pop_flower_recordin">
+						查看纪录
+					</div>
+				</div>
+				<div class="pop_flower_recordgo">
+					<img src="../../public/images/community/btn_t_middle@2x.png" alt="" />
+				</div>
+			</div>
+			<div class="share_page" style="display: none;">
+				<img src="../../public/images/community/share_page.png" alt="分享页面"/>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../public/javascripts/dropload.min.js"></script>
+		<script type="text/javascript" src="../../public/javascripts/sociality.js"></script>
+		<link rel="stylesheet" href="../../public/stylesheets/dropload.css" />
+		<link rel="stylesheet" href="../../public/stylesheets/styles.css" />
+		<script type="text/javascript" src="../../public/javascripts/swipe.js"></script>
+		<script type="text/javascript" src="../../public/javascripts/sha1.js"></script>
+
+		<script>
+			//顶部banner
+			$(function() {
+				new Swipe(document.getElementById('banner_box'), {
+					speed: 500,
+					auto: 3000,
+					callback: function() {
+						var lis = $(this.element).next("ol").children();
+						lis.removeClass("on").eq(this.index).addClass("on");
+					}
+				});
+			});
+			function AdaptHeight_bg() {
+				height = $(window).height();
+				$('.pop_shadow').css('height', height);
+			}
+			window.onresize = AdaptHeight_bg();
+		</script>
+	</body>
+
+</html>

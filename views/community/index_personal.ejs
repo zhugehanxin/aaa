@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+	<!--<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="../../public/javascripts/jquery.min.js"></script>
+		<script type="text/javascript" src="../../public/javascripts/self-adapation.js"></script>
+		<link rel="stylesheet" href="../../public/stylesheets/community.css" />
+		<title>我的社区中心</title>
+	</head>-->
+<% include community.ejs %>
+	<body style="background-color: #EEEEEE;">
+		<header>
+			<div class="header_com">
+				<ul class="float_l_r">
+					<li class="return_btn"></li>
+					<!--<li>
+						<img src="../public/img/community/ico_list_mg1@2x.png" alt="收到信息"/>
+					</li>-->
+					<!--<li class="flower_btn"></li>-->
+				</ul>
+				<div class="personal_scu">
+					<img src="../../public/images/all/img-face.jpg" alt="" />
+				</div>
+				<div class="nicname_com">
+					你的名称是什么请写在这里你的名称是什么请写在这里
+				</div>
+				<ol class="follow_fan">
+					<li>关注<span>322</span></li>
+					<li>丨</li>
+					<li>粉丝<span>2222</span></li>
+				</ol>
+				<div class="follow_chat">
+					<!--<div class="follow_btn f_c_btn">
+						+关注
+					</div>-->
+					<!--<div class="chat_btn f_c_btn">
+						私聊
+					</div>-->
+					<div class="follow_btn_other f_c_btn">
+						取消关注
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="navbar">
+			<ul class="navbar_ele">
+				<li class="navbar_ele_bom" onclick="select(this,1)">相册</li>
+				<li class="navbar_ele_even"></li>
+				<li onclick="select(this,2)">参与</li>
+				<li class="navbar_ele_even"></li>
+				<li onclick="select(this,3)">收获</li>
+				<li class="navbar_ele_even"></li>
+				<li onclick="select(this,4)">购买</li>
+			</ul>
+		</div>
+		<div class="content_null" style="display: none;">
+			<img src="../../public/images/community/img_choujiangjilu@2x.png" alt="您没有中奖" />
+			<div class="content_words">暂无数据</div>
+		</div>
+
+		<footer class="content_bom">
+			<ul class="content_bom_a con_bom_all" style="display: none;">
+				<li>
+					<img src="../../public/images/all/img-face.jpg" alt="" />
+				</li>
+				<li>
+					<img src="../../public/images/all/img-face.jpg" alt="" />
+				</li>
+				<li>
+					<img src="../../public/images/all/img-face.jpg" alt="" />
+				</li>
+			</ul>
+			<div class="loading_content">
+				<div class="content_bom_b_out con_bom_all" style="display: none;">
+					<div class="content_bom_it">
+						<ul class="content_bom_b">
+							<li class="content_b_f">
+								<div class="con_happy">
+									<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+								</div>
+								<p class="con_happynum">
+									1000张
+								</p>
+							</li>
+							<li class="content_b_s">
+								<h2>幸福商城兑换券幸福商城兑换券<span>1000</span>张</h2>
+								<h3>期号：<span>854689789</span></h3>
+								<p>已参与：<span>2</span>人次<span>查看详情</span></p>
+							</li>
+						</ul>
+						<div class="bottom_rolling">
+							<div class="rolling_left">
+								<div class="bar_out">
+									<div class="bar_in" style="width:' + siderbar + '"></div>
+								</div>
+								<p class="rolling_left_f">总需&nbsp;<span class="allneed">8888</span>人</p>
+								<p class="rolling_left_r">剩余&nbsp;<span class="leftneed">9999</span></p>
+							</div>
+							<div class="rolling_right">
+								追加
+							</div>
+						</div>
+					</div>
+					<div class="content_bom_it">
+						<ul class="content_bom_b">
+							<li class="content_b_f">
+								<div class="con_happy">
+									<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+								</div>
+								<p class="con_happynum">
+									1000张
+								</p>
+							</li>
+							<li class="content_b_s">
+								<h2>幸福商城兑换券幸福商城兑换券<span>1000</span>张</h2>
+								<h3>期号：<span>854689789</span></h3>
+								<p>已参与：<span>2</span>人次<span>查看详情</span></p>
+							</li>
+						</ul>
+						<div class="already_announ announcing">
+							<div class="already_announ_a">
+								获奖者：<span>昵称显示在这里昵称显示在这里昵称显示在这里</span>
+							</div>
+							<div class="already_announ_b">
+								<span>222222</span>人次
+							</div>
+							<div class="already_announ_c announcing_c">
+								再次购买
+							</div>
+						</div>
+					</div>
+					<div class="content_bom_it">
+						<ul class="content_bom_b">
+							<li class="content_b_f">
+								<div class="con_happy">
+									<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+								</div>
+								<p class="con_happynum">
+									1000张
+								</p>
+							</li>
+							<li class="content_b_s">
+								<h2>幸福商城兑换券幸福商城兑换券<span>1000</span>张</h2>
+								<h3>期号：<span>854689789</span></h3>
+								<p>已参与：<span>2</span>人次<span>查看详情</span></p>
+							</li>
+						</ul>
+						<div class="announcing">
+							<div class="announcing_a">
+								<img src="../../public/images/community/ico_time@2x.png" alt="抽奖揭晓" />
+							</div>
+							<div class="announcing_b">
+								即将揭晓、正在计算，请稍后...
+							</div>
+							<div class="announcing_c">
+								再次购买
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content_bom_c con_bom_all" style="display: none;">
+					<ul class="content_c_in">
+						<li class="content_c_f">
+							<div>
+								<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+							</div>
+							<p class="con_hapnum">
+								1000张
+							</p>
+						</li>
+						<li class="content_c_s">
+							<h1>幸福商城兑换券<span>1000</span>张</h1>
+							<p><em>期号：</em><span>854689789</span></p>
+							<p><em>总需：</em><span>1555</span>人次</p>
+							<p class="con_third_p"><em>幸运号码：</em><span>1002955</span></p>
+							<p><em>本期参与：</em><span>10</span>人次</p>
+							<p><em>揭晓时间：</em><span>2016-05-22&nbsp;&nbsp;22:59:00</span></p>
+						</li>
+					</ul>
+					<ul class="content_c_in">
+						<li class="content_c_f">
+							<div>
+								<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+							</div>
+							<p class="con_hapnum">
+								1000张
+							</p>
+						</li>
+						<li class="content_c_s">
+							<h1>幸福商城兑换券<span>1000</span>张</h1>
+							<p><em>期号：</em><span>854689789</span></p>
+							<p><em>总需：</em><span>1555</span>人次</p>
+							<p class="con_third_p"><em>幸运号码：</em><span>1002955</span></p>
+							<p><em>本期参与：</em><span>10</span>人次</p>
+							<p><em>揭晓时间：</em><span>2016-05-22&nbsp;&nbsp;22:59:00</span></p>
+						</li>
+					</ul>
+					<ul class="content_c_in">
+						<li class="content_c_f">
+							<div>
+								<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+							</div>
+							<p class="con_hapnum">
+								1000张
+							</p>
+						</li>
+						<li class="content_c_s">
+							<h1>幸福商城兑换券<span>1000</span>张</h1>
+							<p><em>期号：</em><span>854689789</span></p>
+							<p><em>总需：</em><span>1555</span>人次</p>
+							<p class="con_third_p"><em>幸运号码：</em><span>1002955</span></p>
+							<p><em>本期参与：</em><span>10</span>人次</p>
+							<p><em>揭晓时间：</em><span>2016-05-22&nbsp;&nbsp;22:59:00</span></p>
+						</li>
+					</ul>
+				</div>
+				<div class="content_bom_d con_bom_all">
+					<div class="buy_details">
+						<ul class="content_bom_d_in">
+							<li class="content_bom_d_l">
+								<div>
+									<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+								</div>
+							</li>
+							<li class="content_bom_d_r">
+								<h2>这里是标题多少都可以只要你加上去</h2>
+								<h3>商品价格：<span>2995</span>幸福券<span>29</span>普通券</h3>
+								<p>购买时间：<span>2016-02-09&nbsp;&nbsp;16:33:11</span></p>
+							</li>
+						</ul>
+						<div class="buy_state_nobtn buy_state">
+							<p>正在派发中</p>
+						</div>
+						<div class="buy_state_btn buy_state" style="display: none;">
+							<p>确认收货</p>
+						</div>
+					</div>
+					<div class="buy_details">
+						<ul class="content_bom_d_in">
+							<li class="content_bom_d_l">
+								<div>
+									<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+								</div>
+							</li>
+							<li class="content_bom_d_r">
+								<h2>这里是标题多少都可以只要你加上去</h2>
+								<h3>商品价格：<span>2995</span>幸福券<span>29</span>普通券</h3>
+								<p>购买时间：<span>2016-02-09&nbsp;&nbsp;16:33:11</span></p>
+							</li>
+						</ul>
+						<div class="buy_state_nobtn buy_state">
+							<p>正在派发中</p>
+						</div>
+						<div class="buy_state_btn buy_state" style="display: none;">
+							<p>确认收货</p>
+						</div>
+					</div>
+					<div class="buy_details">
+						<ul class="content_bom_d_in">
+							<li class="content_bom_d_l">
+								<div>
+									<img src="../../public/images/community/img_cjlq@2x.png" alt="" />
+								</div>
+							</li>
+							<li class="content_bom_d_r">
+								<h2>这里是标题多少都可以只要你加上去</h2>
+								<h3>商品价格：<span>2995</span>幸福券<span>29</span>普通券</h3>
+								<p>购买时间：<span>2016-02-09&nbsp;&nbsp;16:33:11</span></p>
+							</li>
+						</ul>
+						<div class="buy_state_nobtn buy_state">
+							<p>正在派发中</p>
+						</div>
+						<div class="buy_state_btn buy_state" style="display: none;">
+							<p>确认收货</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="pop_window" style="display: none;">
+			<div class="pop_shadow"></div>
+			<div class="pop_content">
+				<div class="pop_content_top">
+					<div class="pop_content_num">选择数量</div>
+					<div class="pop_content_img">
+						<img src="../public/img/gerenziliao/ico_delete@2x.png" alt="删除按钮" />
+					</div>
+				</div>
+				<div class="pop_content_choose">
+					<ul class="pop_content_ones">
+						<li class="pop_content_redborder">5</li>
+						<li>20</li>
+						<li>50</li>
+						<li>100</li>
+					</ul>
+					<div class="pop_content_self">
+						<div class="pop_content_left">
+							<img src="../public/img/jiangquanxiangqing/ico_btn_reduce@2x.png" alt="减" />
+						</div>
+						<div class="pop_content_middle">
+							<input type="number" alt="数字显示" placeholder="1" />
+						</div>
+						<div class="pop_content_right">
+							<img src="../public/img/jiangquanxiangqing/ico_btn_add@2x.png" alt="加" />
+						</div>
+
+					</div>
+					<div class="pop_bottom">
+						送<span>1000</span>朵花花，共<span>1000000</span>元。
+					</div>
+				</div>
+				<div class="pop_content_btn">
+					确认送出
+				</div>
+			</div>
+			<!--<div class="remainder">
+				<h3>余额不足</h3>
+				<ul>
+					<li>去充值</li>
+					<li>取消</li>
+				</ul>
+			</div>-->
+		</div>
+		<script type="text/javascript" src="../../public/javascripts/dropload.min.js"></script>
+		<script type="text/javascript" src="../../routes/sha1.js"></script>
+		<!--<script type="text/javascript" src="../public/js/community.js"></script>-->
+		<link rel="stylesheet" href="../../public/stylesheets/dropload.css" />
+		<script>
+			function AdaptHeight() {
+				height = $(window).height() - $(".header_com").parent().height() - $(".navbar").height();
+				//获取浏览器可是窗口的高度
+				$('.content_null').css('height', height);
+				//赋值给页面的高度属性
+			}
+			window.onresize = AdaptHeight();
+			//onresize 事件会在窗口或框架被调整大小时发生。
+			function AdaptHeight_bg() {
+				height = $(window).height();
+				$('.pop_shadow').css('height', height);
+			}
+			window.onresize = AdaptHeight_bg();
+		</script>
+	</body>
+
+</html>

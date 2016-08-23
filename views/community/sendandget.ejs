@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<!--<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="../public/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../public/js/self-adapation.js"></script>
+		<link rel="stylesheet" href="../public/css/community.css" />
+		<title>收花送花</title>
+	</head>-->
+	
+	<% include community.ejs %>
+
+	<body>
+		<header class="sendget_head">
+			<div class="sendget_return">
+				<img src="../../public/images/install/ico_btn1_header@2x.png" alt="返回" />
+			</div>
+			<ul class="sendandget">
+				<li class="sendget_get sendget_bottom">收花</li>
+				<li class="sendget_send">送花</li>
+			</ul>
+		</header>
+		<div class="sendget_mid_a">
+			<ul class="sendget_inside">
+				<li class="sendget_img">
+					<img src="../../public/images/all/img-face.jpg" alt="你的头像" />
+				</li>
+				<li class="sendget_details">
+					<div class="sendget_nickname">
+						你的昵称就在这里
+					</div>
+					<div class="sendget_num">
+						觉得你很赞，送给你<img src="../../public/images/community/ico_flower@2x.png" alt="花" />×<span>5000</span>
+					</div>
+					<div class="sendget_time">
+						4分钟前
+					</div>
+				</li>
+			</ul>
+			<ul class="sendget_inside">
+				<li class="sendget_img">
+					<img src="../../public/images/all/img-face.jpg" alt="你的头像" />
+				</li>
+				<li class="sendget_details">
+					<div class="sendget_nickname">
+						你的昵称就在这里
+					</div>
+					<div class="sendget_num">
+						觉得你很赞，送给你<img src="../../public/images/community/ico_flower@2x.png" alt="花" />×<span>5000</span>
+					</div>
+					<div class="sendget_time">
+						4分钟前
+					</div>
+				</li>
+			</ul>
+			<ul class="sendget_inside">
+				<li class="sendget_img">
+					<img src="../../public/images/all/img-face.jpg" alt="你的头像" />
+				</li>
+				<li class="sendget_details">
+					<div class="sendget_nickname">
+						你的昵称就在这里
+					</div>
+					<div class="sendget_num">
+						觉得你很赞，送给你<img src="../../public/images/community/ico_flower@2x.png" alt="花" />×<span>5000</span>
+					</div>
+					<div class="sendget_time">
+						4分钟前
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="sendget_mid_b" style="display: none;">
+			<div class="sendget_mid_in">
+				<div class="sendget_your">
+					您赠送<img src="../../public/images/community/ico_flower@2x.png" class="sendget_img_a" />×
+					<span class="sendget_span_a">5000</span>给
+					<img src="../../public/images/all/img-face.jpg" alt="头像" class="sendget_img_b" />
+					<span class="sendget_span_b">
+					你的昵称就在这里，存在但是不合理
+				</span>
+				</div>
+				<div class="sendget_yourtime">
+					4分钟
+				</div>
+			</div>
+			<div class="sendget_mid_in">
+				<div class="sendget_your">
+					您赠送<img src="../../public/images/community/ico_flower@2x.png" class="sendget_img_a" />×
+					<span class="sendget_span_a">5000</span>给
+					<img src="../../public/images/all/img-face.jpg" alt="头像" class="sendget_img_b" />
+					<span class="sendget_span_b">
+					你的昵称就在这里，存在但是不合理
+				</span>
+				</div>
+				<div class="sendget_yourtime">
+					4分钟
+				</div>
+			</div>
+			<div class="sendget_mid_in">
+				<div class="sendget_your">
+					您赠送<img src="../../public/images/community/ico_flower@2x.png" class="sendget_img_a" />×
+					<span class="sendget_span_a">5000</span>给
+					<img src="../../public/images/all/img-face.jpg" alt="头像" class="sendget_img_b" />
+					<span class="sendget_span_b">
+					你的昵称就在这里，存在但是不合理
+				</span>
+				</div>
+				<div class="sendget_yourtime">
+					4分钟
+				</div>
+			</div>
+		</div>
+		<link rel="stylesheet" href="../../public/stylesheets/styles.css" />
+		<script type="text/javascript">
+			$(function(){
+				$('.sendandget').children('li').on('click',function(){
+					$(this).parents('.sendandget').children('li').removeClass('sendget_bottom');
+					$(this).addClass('sendget_bottom');
+					if($('.sendget_get').hasClass('sendget_bottom')){
+						$('.sendget_mid_a').show();
+						$('.sendget_mid_b').hide();
+					}else{
+						$('.sendget_mid_b').show();
+						$('.sendget_mid_a').hide();
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>
