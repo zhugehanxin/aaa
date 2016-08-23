@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<!--<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="../../public/javascripts/jquery.min.js"></script>
+		<script type="text/javascript" src="../../public/javascripts/flexible.js"></script>
+		<script type="text/javascript" src="../../public/javascripts/active.js"></script>
+		<link rel="stylesheet" href="../../public/stylesheets/active.css" />
+		<title>注册就送大礼包</title>
+	</head>-->
+	<% include active.ejs %>
+	<body>
+		<div class="register-contain">
+			<header class="register-head">
+				<img src="../../public/images/activeone/register_01.jpg" alt="头部" />
+			</header>
+			<div class="register-content">
+				<input type="tel" placeholder="手机号" class="register-tel" />
+				<div class="register-passout">
+					<input type='text' placeholder="登录密码" class="register-password" />
+					<div class="words-judge">6~20位字符</div>
+				</div>
+				<ul class="identify-code">
+					<input type="number" placeholder="验证码" class="register-identify register-identify-input" />
+					<div id="getnum" class="register-identify register-identify-btn">获取验证码</div>
+				</ul>
+				<div class="register-add">  
+					添加邀请码，帮助好友赚取收益<span class="invide-up"><i class="icon iconfont">&#xe601</i></span><span class="invide-down" style="display: none;"><i class="icon iconfont">&#xe600</i></span>
+				</div>
+				<input type="tel" placeholder="邀请码" class="register-invide-code" />
+				<div class="register-readed">
+					<p>已阅读并同意《<a href="http://wx.hxfapp.com/v1/login/serveclause"><span>扑多协议</span></a>》</p>
+					<p>已注册，<span>立即登录</span></p>
+				</div>
+				<div class="register-btn">
+					立即注册领取红包
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var wait = 60;
+
+			function time(o) {
+				if(wait == 0) {
+					o.removeAttribute("disabled");
+					o.innerHTML = "获取验证码";
+					wait = 60;
+				} else {
+					o.setAttribute("disabled", true);
+					o.innerHTML = wait + "秒后重发";
+					wait--;
+					setTimeout(function() {
+							time(o)
+						},
+						1000)
+				}
+			}
+			document.getElementById("getnum").onclick = function() {
+				time(this);
+			}
+		</script>
+	</body>
+
+</html>
